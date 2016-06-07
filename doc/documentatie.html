@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>We Ball</title>
+    <link rel="stylesheet" href="scholarly.css">
+    <link rel="stylesheet" href="node_modules/prismjs/themes/prism-coy.css">
+    <script src="node_modules/prismjs/prism.js" defer></script>
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header>
+      <p class="title">We Ball</p>
+      <p class="subtitle"></p>
+    </header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>We Ball</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="http://students.info.uaic.ro/~rares.nechita/" typeof="schema:Person">
+              <span property="schema:givenName">Rares</span>
+              <span property="schema:familyName">Nechita</span>
+            </a>
+            <a href="#scienceai" property="sa:roleAffiliation" resource="http://students.info.uaic.ro/~rares.nechita/">a</a>
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+              <a property="schema:email" href="mailto:rares.nechita@info.uaic.ro" title="corresponding author">&#9993;</a>
+            </sup>
+          </li>
+          <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="http://students.info.uaic.ro/~costel.atodiresei/" typeof="schema:Person">
+              <span property="schema:givenName">Atodiresei</span>
+              <span property="schema:familyName">Sergiu</span>
+            </a>
+            <a href="#scienceai" property="sa:roleAffiliation" resource="http://students.info.uaic.ro/~costel.atodiresei/">a</a>
+          </li>
+           <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="http://students.info.uaic.ro/~elena.paraschiv/" typeof="schema:Person">
+              <span property="schema:givenName">Paraschiv</span>
+              <span property="schema:familyName">Bianca</span>
+            </a>
+            <a href="#scienceai" property="sa:roleAffiliation" resource="http://students.info.uaic.ro/~elena.paraschiv/">a</a>
+          </li>
+        </ol>
+        <ol>
+          <li id="scienceai">
+            <a href="http://www.info.uaic.ro/bin/Main/" typeof="schema:Corporation">
+              <span property="schema:name">project</span>
+            </a>
+          </li>
+           <li id="scienceai">
+            <a href="http://www.info.uaic.ro/bin/Main/" typeof="schema:Corporation">
+              <span property="schema:name">infoiasi</span>
+            </a>
+          </li>
+           <li id="scienceai">
+            <a href="http://profs.info.uaic.ro/~busaco/teach/courses/web/" typeof="schema:Corporation">
+              <span property="schema:name">web</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <section typeof="sa:About" id="abstract">
+        <h2>Despre</h2>
+        <p>
+        We Ball este o aplicatie care permite crearea si administrarea de competitii dupa modelul Turneelor Finale de fotbal. De asemenea ea ofera posibilitatea de a cauta dupa o multitudine de criterii un meci real din campionatele cele mai puternice ale Europei. Utilizatorii care isi fac cont pot crea competitii intre ei, care sunt vizibile doar participantilor si o pot administra cum doresc. Aplicatia ofera si posibilitate de a adauga comentarii sau de a vota in anumite poll-uri chiar daca utilizatorul nu are un cont. Pentru cei interesati datele despre campionatele publice create sunt disponibile si in format CSV,JSON,PDF si via un flux Atom.
+      </p>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="motivation">
+        <h2>Thenologii folosite</h2>
+        <p>
+           <ul>
+             <li>
+               HTML5 pentru structurarea paginii Web
+             </li>
+             <li>
+               CSS pentru layot-ul si stilizarea paginilor.
+             </li>
+             <li>
+               PHP pentru functionalitatea aplicatie la nivel de server, dar si pentru comportamentul aplicatiei cu interfata si cu baza de date
+             </li>
+             <li>
+               MySQL ca baza de date pentru interogari pe baza de date.
+             </li>
+           </ul>
+        </p>
+      </section>
+      <section typeof="sa:Results" id="definition">
+        <h2>Baza de date</h2>
+        <p>
+        	Baza de date este compusa din 11 tabele care sunt folosite pentru a stoca informatii despre competitii si utilizatori.
+          The database is composed of 11 tables that are used to store competition data and user information.<br>
+          Tabelul users contine campurile email si parola cae identifica unic un utilizator, dar si un camp special pentru identificarea tipului de utilizator, user sau admin.<br>
+          Celelalte tabele contin informatii despre competitii, echipele participante, echipele care pot participa intr-o competitie publica, meciurile unei competitii, comentarii sau poll-uri
+       
+        </p>
+         <p>
+         <img src="tables.jpg">
+        </p>
+       </section> 
+       <h2>Detalii de implementare</h2>
+       		La crearea unei competitii noi administratorul alege echipele participante din echipele disponibile in baza de date si creaza o competitie cu un anumit numar de echipe specificand numele si numarul de echipe calificate din fiecare grupa. La crearea competitiei, toate echipele participante sunt adaugate intr-o tabela fiind inregistrate ca participante in acea competitie. In acea tabela se pot retine date precum numarul de puncte numarul de victorii si grupa din care face parte. Tot la crearea competitiei se va adauga in tabela meciuri, partidele care urmeaza a fi disputate in fazele eliminatorii, ca apoi pe parcursul competitiei sa se actualizeze echipele participante.
+      
+        <section >
+          <h2>Use cases</h2>
+          <p>
+          Cand aplicatia este deschisa utilizatorul va putea vedea prima pagina, unde are posbilitatea de a ajunge in alte pagini si de a cauta un meci din istoricul meciurilor. Fara un cont el poate vedea competitiile publice (Create de administratorii aplicatiei) si poate vota in anumite polluri sau poate comenta la partidele disputate.
+         	<p> Utilizatorul se poate inregistra sau loga pe baza unui email si o parola si isi poate crea propriile competitii. Aici el poate adauga prietenii sai in acea competitie sau poate adauga competitorii fictivi in cazul in care nu sunt suficienti competitori reali. Competitia este vizibila doar pentru participantii ei, acestia ocupandu-se in intregime de administrarea ei.
+          </p>
+          <p>
+          Pagina de administrare este disponibila doar admin-ului si el poate introduce un nou sport, sterge echipe, adauga echipe etc. De asemenea el creaza competitiile publice (care pot fi vazute si de utilizatorii care nu sunt logati)
+          </p>
+          Daca cineva este interesat de datele unei competitii aceastea sunt disponibile si in foramt CSV,JSON,PDF si via un Flux Atom.
+
+        </section>
+
+
+        
+        
+        
+      <section typeof="sa:ReferenceList" id="references">
+        <h2>Bibliografie</h2>
+        <dl>
+          <dt>Tehnolgii Web</dt>
+          <dd id="ref-nyt" typeof="schema:ScholarlyArticle"
+              resource="http://profs.info.uaic.ro/~busaco/teach/courses/web/">
+            <cite property="schema:name"><a
+              href="http://profs.info.uaic.ro/~busaco/teach/courses/web/">The
+              Tehnolgii Web</a></cite>,
+            by
+            <span property="schema:author" typeof="schema:Person">
+              <span property="schema:name">Dr. Sabin-Corneliu Buraga</span>
+            </span>;
+          </dd>
+          <dt>PHP Manual</dt>
+          <dd id="ref-sa-ontology" typeof="schema:ScholarlyArticle"
+              resource="http://php.net/manual/en/manual.php">
+            <cite property="schema:name"><a
+              href="http://php.net/manual/en/manual.php">The
+              PHP manual</a></cite>,
+          </dd>
+          <dt>W3Schools</dt>
+          <dd id="ref-vernacular" typeof="schema:ScholarlyArticle" resource="http://www.w3schools.com/">
+            <cite property="schema:name"><a href="http://www.w3schools.com/">W3Schools</a>
+          </dd>
+          <dt>Stack Overflow</dt>
+          <dd id="ref-vernacular" typeof="schema:ScholarlyArticle" resource="http://stackoverflow.com/">
+            <cite property="schema:name"><a href="http://stackoverflow.com/">Stack Overflow</a>
+          </dd>
+          <dt>PHP Tutorials</dt>
+          <dd id="ref-vernacular" typeof="schema:ScholarlyArticle" resource="http://www.homeandlearn.co.uk/php/php15p1.html">
+            <cite property="schema:name"><a href="http://www.homeandlearn.co.uk/php/php15p1.html">PHP Tutorials</a>
+          </dd>
+          
+        </dl>
+      </section>
+    </article>
+    <footer>
+      <p>
+        <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY</a>
+        <a href="https://twitter.com/sciencedotai">@sciencedotai</a>
+        •
+        <a href="https://github.com/scienceai/scholarly.vernacular.io">Contribute</a>
+        •
+        Brought to you by the
+        <a href="http://science.ai/"><img src="sciencedotai.svg" alt="science.ai logo" height="20px"></a>
+        League of JStice
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section
+{
+	display:block;
+}
+body
+{
+	background-image: URL("Images/background1.jpg");
+	background-color:black;
+	font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+	color:#0088FF;
+}
+h1
+{
+	
+	color:#0088FF;
+	background-color:black;
+	margin-left:15%;
+}
+
+.tabel
+{
+	color:#0088FF;
+	text-align:center;
+	border: thin solid #CCC;
+	margin:auto; 
+}
+
+.tabel_user
+{
+	color:#0088FF;
+	text-align:center;
+	border: thin solid #CCC;
+	margin:auto; 
+}
+
+#mtable
+{
+	color:#0088FF;
+	text-align:center;
+	border: thin solid #CCC;
+	margin:auto; 
+}
+
+.stage{
+	
+	text-align:center;
+	margin:auto;
+	
+}
+
+
+
+
+h2
+{
+	
+	color:#0088FF;
+	background-color:black;
+
+}
+.home_button
+{
+	color:#0088FF;
+	background-color:black;
+	border: thin solid #347b97;
+	margin-left:20%;
+	margin-right:20%;
+	margin-top:1%;
+	text-align:center;
+	text-decoration:none;
+	padding:4px;
+	margin-bottom:1%;
+}
+a
+{
+text-decoration:none;
+font:normal normal bold large serif;	
+}
+.gest_form
+{
+	margin-left:25%;
+	margin-right:25%;
+}
+.box
+{
+	margin-left:20%;
+	margin-right:20%;
+	margin-bottom:5%;
+	border: thin solid #347b97;
+	background-color:black;
+	
+}
+.login
+{
+	
+	float: left;
+	margin-left: 20%;
+	margin-top: 10%;
+	border: thin solid #347b97;
+	background-color:#347b97;
+
+}
+.login_header
+{
+	border: thin solid black;
+	background-color:black;
+	color:#347b97;
+	font:normal normal bold large serif;
+	text-align: center;
+	
+	
+}
+.inside_login_box
+{
+	margin: 50px;
+	background-color:#347b97;
+}
+.font_label
+{
+	color:#0088FF;
+	
+}
+label 
+{
+     font-weight:bold;
+     width:100px;
+     font-size:14px;
+}
+.inside_label
+{
+    border:#666666 solid 1px;
+	
+}
+
+.log_page
+{
+	margin-top:15%;
+	float:right;
+	margin-right:20%
+}
+#admin_list
+{
+	border:1px solid #347b97;
+	text-decoration:none;
+	list-style-type:none;
+	padding:2px;
+	font-size:18px;
+	margin-right:100px;
+	color:#0088FF;
+	text-align:center;
+	background-color:black;
+	position:absolute;
+	bottom:30%;
+}
+.welcome
+{
+	text-align:center;
+	color:#0088FF;
+	background-color:black;
+	margin-top:0%;
+	
+}
+.title
+{
+	margin-left:30%;
+}
+
+.meniu ul
+{
+	list-style:none;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:5px;
+}
+.meniu li
+{
+	float:left;
+	background-color:black;
+	width:20%;
+	text-align:center;
+	border:1px solid #347b97;
+	padding:20px 20px;
+	display:inline;
+}
+.meniu a
+{
+	text-decoration:none;
+	color:#0088FF;
+	font-weight: bold;
+}
+.content
+{	
+	clear:both;
+}
+.meniu li:hover
+{
+	background-color:#070f10;
+}
+
+form{
+	margin:10%;	
+}
+
+#f_poll{
+	margin:10%;
+}
+
+#date_match{
+	margin:10%;	
+}
+
+#admin_list{
+				border:#666666 solid 2px;
+				text-decoration:none;
+				list-style-type:none;
+				padding:2px;
+				font-size:18px;
+				margin-right:100px;
+				
+			 } 
+@viewport{
+   zoom: 1.0;
+   width: extend-to-zoom;
+}
+@-ms-viewport{
+   width: extend-to-zoom;
+   zoom: 1.0;
+}
